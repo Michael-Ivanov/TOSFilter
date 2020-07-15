@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <TabPane layoutX="21.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Filter">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="main_table" layoutX="25.0" layoutY="36.0" prefHeight="413.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="symbol_column" prefWidth="65.0" text="Symbol" />
+                            <TableColumn fx:id="price_column" prefWidth="65.0" text="Price" />
+                              <TableColumn fx:id="shares_column" prefWidth="100.0" text="Shares" />
+                              <TableColumn fx:id="time_column" prefWidth="75.0" text="Time" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="start_button" layoutX="14.0" layoutY="424.0" mnemonicParsing="false" onAction="#startButtonClicked" prefWidth="60.0" text="Start" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="426.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="symbols_area" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="68.0" promptText="one symbol per line" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="24.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </TextArea>
+                        <Label layoutX="8.0" layoutY="6.0" text="Symbols" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="6.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="sizes_area" layoutX="86.0" layoutY="24.0" prefHeight="300.0" prefWidth="68.0" promptText="one size per line" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="24.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </TextArea>
+                        <Label layoutX="90.0" layoutY="6.0" text="Sizes">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="save_button" layoutX="98.0" layoutY="339.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefWidth="68.0" text="Save" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="340.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
